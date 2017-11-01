@@ -16,6 +16,8 @@ window.onload = function() {
   initApp();
 };
 
+// TODO: add as new ext in chrome and add the app to dev console - change client id etc
+
 //hello();
 
 

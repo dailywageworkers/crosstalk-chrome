@@ -13,9 +13,20 @@
     "128": "icon-128.png"
   },
   "permissions": [
-    "identity"
+    "identity",
+    "activeTab",
+    "contextMenus",
+    "tabs",
+    "<all_urls>"
   ],
-  // Adding https://www.gstatic.com/ to the external scripts authorized domains so we can import the firebase JS SDK and access the Realtime Database as well as Firebase Storage.
+  "commands": {
+    "save" : {
+        "suggested_key": {
+             "default": "Alt+Shift+S" 
+        },
+        "description": "Save a link to cross talk"
+    }
+  },
   "content_security_policy":"script-src 'self' 'unsafe-eval' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
   "oauth2": {
     "client_id": "623377511087-ckc8fank6i7sp2hh56etm8nn9nrccuha.apps.googleusercontent.com",
