@@ -15,6 +15,20 @@ firebase.initializeApp(config);
 function syncClipboardToFirebase(data) {
   const dbRef = firebase.database().ref().child('text');
   dbRef.set(data);
+
+  //POST call to firebase notifications
+  fetch('https://fcm.googleapis.com/fcm/send', {
+    method: 'post',
+    body: {
+      to: '',
+      data: {
+        copiedValue: 'hello from the other side'
+      }
+    }
+  }).then(function(response) {
+    console.log('data sent over!');
+  });
+
   firebase.database().ref().child('history').push(data);
 }
 
