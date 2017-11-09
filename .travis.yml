@@ -1,0 +1,14 @@
+# he ha ha
+---
+language: node_js
+node_js:
+  - 7
+cache:
+  directories:
+  - node_modules
+# script needed to test, because defaults don't work on osx
+script:
+  - npm run build
+
+notifications:
+  slack: ab--space:clGeU06zSZvLRmHXGzKU4E1u
